@@ -22,7 +22,7 @@ var twitter_thisisaaronland_poetry = function($) {
    * replace the text node in the DOM, with several text nodes
    * interspersed with BR tags where the separators were
    */
-  function splitText() {
+  function inPlaceTextSplit() {
     var parent = this.parentNode;
     var insertionPoint = this.nextSibling;
     var lines = $(this).text().split(separator);
@@ -38,26 +38,26 @@ var twitter_thisisaaronland_poetry = function($) {
   }
 
   /**
-   * Given a jQuery node representing a tweet, find the subelements representing
-   * the tweet contents, and break them into multiple lines according to separator
+   * Given a jQuery node representing a tweet (or the user's bio, which has a similar format)
+   * break the lines of the tweet content, if we haven't done so already
    * @param jQuery
    */
   function breakLines($tweet) {
-    $tweet.find('.js-tweet-text')
+    $tweet.find('.js-tweet-text, .bio')
         .filter(function(){ return $(this).data(brokenAlreadyKey) !== true; })
         .data(brokenAlreadyKey, true)
         .contents()
         .filter(function(){ return this.nodeType === NODE_TEXT; })
-        .map(splitText);
+        .map(inPlaceTextSplit);
   }
 
   /**
    * Given a jQuery node representing a tweet, return true if it belongs to the
-   * account we are interested in (matches accountName in scope)
+   * account we are interested in
    * @param jQuery
    * @return boolean
    */
-  function isAccount($tweet) {
+  function isRightAccount($tweet) {
     return $tweet.find('.username').text().indexOf(accountName) !== -1;
   }
 
@@ -68,7 +68,7 @@ var twitter_thisisaaronland_poetry = function($) {
     // console.log(scriptName);
     $('.tweet').each( function() {
       var $tweet = $(this);
-      if (isAccount($tweet)) {
+      if (isRightAccount($tweet)) {
         breakLines($tweet);
       }
     } );
