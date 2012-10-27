@@ -40,6 +40,7 @@ var twitter_thisisaaronland_poetry = function($) {
   /**
    * Given a jQuery node representing a tweet, find the subelements representing
    * the tweet contents, and break them into multiple lines according to separator
+   * @param jQuery
    */
   function breakLines($tweet) {
     $tweet.find('.js-tweet-text')
@@ -53,6 +54,7 @@ var twitter_thisisaaronland_poetry = function($) {
   /**
    * Given a jQuery node representing a tweet, return true if it belongs to the
    * account we are interested in (matches accountName in scope)
+   * @param jQuery
    * @return boolean
    */
   function isAccount($tweet) {
