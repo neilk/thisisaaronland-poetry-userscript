@@ -20,9 +20,12 @@ without affecting links, hashtags, and so on.
 
 ## How?
 
-Load the raw file, in a browser which can run userscripts.
+Use a browser which can run userscripts. Chrome doesn't allow userscripts to be loaded from wherever, so, you may require the TamperMonkey extension. On Firefox, use the Greasemonkey extension.
 
-Chrome doesn't allow userscripts to be loaded from wherever, so, you may require TamperMonkey.
+In this browser, load the JavaScript file:
+
+https://github.com/neilk/thisisaaronland-poetry-userscript/raw/master/thisisaaronland-poetry.user.js
+
 
 ## Why?
 
