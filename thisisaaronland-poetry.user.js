@@ -66,7 +66,7 @@ var twitter_thisisaaronland_poetry = function($) {
    */
   return function(){
     // console.log(scriptName);
-    $('.tweet').each( function() {
+    $('.tweet, .profile-card, .profile-modal').each( function() {
       var $tweet = $(this);
       if (isRightAccount($tweet)) {
         breakLines($tweet);
