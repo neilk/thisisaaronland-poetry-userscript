@@ -3,20 +3,16 @@ thisisaaronland-poetry-userscript
 
 @thisisaaronland writes tweets to be poetry. Read them that way.
 
-e.g., https://twitter.com/thisisaaronland/status/228939505560875008
+e.g., for https://twitter.com/thisisaaronland/status/258392428090884097 , change:
 
-Change:
-
-> @alexandrak but it don't make no difference / 'cause I ain't gonna be easy easy / the only time I'm easy's when I'm / killed by desk
+> guns don't kill people / single moms in binders kill people apparently
 
 to
 
-> @alexandrak but it don't make no difference  
-> 'cause I ain't gonna be easy easy  
-> the only time I'm easy's when I'm  
-> killed by desk  
+> guns don't kill people  
+> single moms in binders kill people apparently  
 
-Without affecting links, hashtags, and so on.
+Without affecting shortened links, usernames, hashtags, and so on.
 
 ## How?
 
