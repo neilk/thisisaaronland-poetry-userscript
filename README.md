@@ -17,3 +17,13 @@ to
     killed by desk
 
 without affecting links, hashtags, and so on.
+
+## How?
+
+Load the raw file, in a browser which can run userscripts.
+
+Chrome doesn't allow userscripts to be loaded from wherever, so, you may require TamperMonkey.
+
+## Why?
+
+I don't know.
