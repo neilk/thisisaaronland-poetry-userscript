@@ -72,7 +72,7 @@ var twitter_thisisaaronland_poetry = function($) {
         breakLines($tweet);
       }
     } );
-    setTimeout(twitter_thisisaaronland_poetry, 100);
+    setTimeout(twitter_thisisaaronland_poetry, 1000);
   };
 
 }(jQuery);
